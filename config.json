@@ -1,0 +1,30 @@
+{
+  "product_name": "EVBikes Pakistan (PakEV)",
+  "tagline": "Compare Every Electric Bike in Pakistan • PAVE Phase 2 Subsidy & Savings Calculator",
+  "version": "1.0.0-mvp",
+  "repo_path": "D:\\evbikes",
+  "tech_stack": {
+    "framework": "Next.js 15 (App Router, Turbopack, React 19, TypeScript)",
+    "styling": "Tailwind CSS v4 + Lucide Icons + Automotive Cockpit Dark/Graphite System",
+    "database": "Supabase PostgreSQL (Tables: brands, models, battery_specs, dealers, leads)",
+    "hosting": "Vercel Edge Network",
+    "seo_tooling": "Programmatic /compare/[model-a]-vs-[model-b] routes, JSON-LD Product & Review schemas, llms.txt"
+  },
+  "color_tokens": {
+    "canvas": "#090D16",
+    "card_bg": "#111827",
+    "card_border": "#1F2937",
+    "accent_electric": "#00F299",
+    "accent_cyan": "#00D2FF",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#9CA3AF",
+    "danger_pave": "#EF4444"
+  },
+  "squad_owners": {
+    "product_manager": "@product-manager",
+    "ui_ux_designer": "@designer",
+    "software_engineer": "@dev",
+    "qa_engineer": "@qa",
+    "growth_marketing": "@marketing"
+  }
+}
