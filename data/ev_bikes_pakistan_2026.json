@@ -23,7 +23,7 @@
     "battery_warranty_months": 18,
     "motor_warranty_months": 24,
     "battery_replacement_cost_estimate": 48000,
-    "image_url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache3.pakwheels.com/system/bike_model_pictures/2084/original/yadea-t5__3_.jpg",
     "featured": true,
     "description": "Pakistan's most popular daily commuter electric scooter with TTFAR energy recovery braking system and robust suspension."
   },
@@ -51,7 +51,7 @@
     "battery_warranty_months": 18,
     "motor_warranty_months": 24,
     "battery_replacement_cost_estimate": 40000,
-    "image_url": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache4.pakwheels.com/ad_pictures/1544/Slide_yadea-ruibin-2026-154499142.webp",
     "featured": false,
     "description": "Ultra-lightweight city scooter designed for tight Karachi and Lahore traffic with under-seat storage."
   },
@@ -68,7 +68,7 @@
     "battery_type": "Graphene Deep-Cycle",
     "battery_voltage": 72,
     "battery_amp_hours": 32,
-    "battery_kwh": 2.30,
+    "battery_kwh": 2.3,
     "claimed_range_km": 140,
     "real_road_range_km": 95,
     "top_speed_kmh": 52,
@@ -79,7 +79,7 @@
     "battery_warranty_months": 18,
     "motor_warranty_months": 24,
     "battery_replacement_cost_estimate": 54000,
-    "image_url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache3.pakwheels.com/system/bike_model_pictures/2088/original/metrot9.jpg",
     "featured": true,
     "description": "Heavy-duty urban commuter with large dual footboards, regenerative controller, and high payload capacity."
   },
@@ -107,7 +107,7 @@
     "battery_warranty_months": 18,
     "motor_warranty_months": 24,
     "battery_replacement_cost_estimate": 48000,
-    "image_url": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://metroev.pk/wp-content/uploads/2026/02/Metro-M6-Empower-black-available-for-free-test-ride.webp",
     "featured": false,
     "description": "Sporty aerodynamic bodywork with LED headlights and disc brakes for comfortable everyday office transit."
   },
@@ -135,7 +135,7 @@
     "battery_warranty_months": 12,
     "motor_warranty_months": 24,
     "battery_replacement_cost_estimate": 45000,
-    "image_url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache3.pakwheels.com/system/bike_model_pictures/2045/original/c1-pro.jpg",
     "featured": true,
     "description": "Vespa-inspired aesthetic scooter popular with university students and female riders across urban centers."
   },
@@ -152,7 +152,7 @@
     "battery_type": "Phylion LiFePO4 (Lithium)",
     "battery_voltage": 76.8,
     "battery_amp_hours": 30,
-    "battery_kwh": 2.30,
+    "battery_kwh": 2.3,
     "claimed_range_km": 120,
     "real_road_range_km": 85,
     "top_speed_kmh": 65,
@@ -163,7 +163,7 @@
     "battery_warranty_months": 36,
     "motor_warranty_months": 36,
     "battery_replacement_cost_estimate": 110000,
-    "image_url": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache2.pakwheels.com/system/bike_model_pictures/2080/original/c1_air.png",
     "featured": true,
     "description": "True Lithium Iron Phosphate battery with 2,000+ charge cycles, 3.5-hour fast charging, and 2.2kW motor."
   },
@@ -191,7 +191,7 @@
     "battery_warranty_months": 36,
     "motor_warranty_months": 36,
     "battery_replacement_cost_estimate": 95000,
-    "image_url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache2.pakwheels.com/system/bike_model_pictures/3526/original/1_%282%29.png",
     "featured": true,
     "description": "Cafe racer-inspired electric motorcycle with classic round headlamp, regenerative braking, and digital console."
   },
@@ -219,7 +219,7 @@
     "battery_warranty_months": 36,
     "motor_warranty_months": 36,
     "battery_replacement_cost_estimate": 140000,
-    "image_url": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache2.pakwheels.com/system/bike_model_pictures/2792/original/Cover_Velocity.png",
     "featured": true,
     "description": "Long-distance urban commuter motorcycle offering realistic 125+ km highway range with dual front disc brakes."
   },
@@ -247,7 +247,7 @@
     "battery_warranty_months": 36,
     "motor_warranty_months": 36,
     "battery_replacement_cost_estimate": 165000,
-    "image_url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache3.pakwheels.com/system/bike_model_pictures/1641/resized/WhatsApp_Image_2022-11-10_at_9.51.45_AM-removebg-preview.png",
     "featured": false,
     "description": "Performance streetfighter electric bike with 105 km/h top speed, sport riding modes, and CBS braking."
   },
@@ -264,7 +264,7 @@
     "battery_type": "Graphene Dry",
     "battery_voltage": 60,
     "battery_amp_hours": 20,
-    "battery_kwh": 1.20,
+    "battery_kwh": 1.2,
     "claimed_range_km": 100,
     "real_road_range_km": 55,
     "top_speed_kmh": 60,
@@ -275,7 +275,7 @@
     "battery_warranty_months": 12,
     "motor_warranty_months": 12,
     "battery_replacement_cost_estimate": 35000,
-    "image_url": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache2.pakwheels.com/system/bike_model_pictures/2232/original/jolta-70-L.jpg",
     "featured": true,
     "description": "Standard Pakistani CD70 frame converted to electric. Budget-friendly entry point for delivery riders."
   },
@@ -303,7 +303,7 @@
     "battery_warranty_months": 12,
     "motor_warranty_months": 12,
     "battery_replacement_cost_estimate": 45000,
-    "image_url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop",
+    "image_url": "https://cache2.pakwheels.com/system/bike_model_pictures/2036/original/ev350.jpg",
     "featured": false,
     "description": "Three-wheeler stable passenger vehicle tailored for senior citizens, physically challenged riders, and domestic chores."
   }

@@ -41,10 +41,12 @@ export default function ComparisonMatrix({ initialBikeIds = ['yadea-t5', 'metro-
     <div
       style={{
         width: '100%',
+        maxWidth: '100%',
+        overflow: 'hidden',
         backgroundColor: '#111827',
         border: '1.5px solid #1F2937',
         borderRadius: '24px',
-        padding: '2rem 1.5rem',
+        padding: '2rem 1.25rem',
         boxShadow: '0 10px 40px rgba(0, 0, 0, 0.6)',
       }}
     >
@@ -115,7 +117,7 @@ export default function ComparisonMatrix({ initialBikeIds = ['yadea-t5', 'metro-
       </div>
 
       {/* Comparison Grid Table */}
-      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', maxWidth: '100%' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '700px' }}>
           <thead>
             <tr>

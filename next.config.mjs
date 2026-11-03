@@ -5,6 +5,18 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: '*.pakwheels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pakwheels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'metroev.pk',
+      },
+      {
+        protocol: 'https',
         hostname: 'images.unsplash.com',
       },
     ],

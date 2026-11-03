@@ -39,7 +39,7 @@ export default async function ComparePage(props: {
     <div className="carbon-glow" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
 
-      <main style={{ maxWidth: '1240px', margin: '0 auto', padding: '2rem 1.25rem', width: '100%', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+      <main style={{ maxWidth: '1240px', margin: '0 auto', padding: '2rem 1.25rem', width: '100%', minWidth: 0, overflowX: 'hidden', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
         
         {/* Breadcrumb Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>

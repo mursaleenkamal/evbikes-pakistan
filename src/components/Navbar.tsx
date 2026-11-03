@@ -1,20 +1,23 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import { Zap, Scale, Calculator, ShieldCheck, Flame } from 'lucide-react'
+import { Zap, Scale, Calculator, Flame, BookOpen, MapPin, Menu, X } from 'lucide-react'
 
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header
       style={{
         width: '100%',
-        backgroundColor: 'rgba(9, 13, 22, 0.85)',
-        backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid #1F2937',
+        backgroundColor: 'rgba(255, 255, 255, 0.96)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid #E2E8F0',
         position: 'sticky',
         top: 0,
         zIndex: 50,
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
       }}
     >
       <div
@@ -34,39 +37,39 @@ export default function Navbar() {
               width: '38px',
               height: '38px',
               borderRadius: '10px',
-              background: 'linear-gradient(135deg, #00F299 0%, #00B87A 100%)',
+              background: 'linear-gradient(135deg, #059669 0%, #10B981 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              boxShadow: '0 0 15px rgba(0, 242, 153, 0.4)',
+              boxShadow: '0 4px 12px rgba(5, 150, 105, 0.25)',
             }}
           >
-            <Zap size={22} color="#090D16" />
+            <Zap size={22} color="#FFFFFF" />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: '1.25rem', fontWeight: 900, letterSpacing: '-0.5px', color: '#FFFFFF' }}>
-              Pak<span style={{ color: '#00F299' }}>EV</span>
+            <div style={{ fontSize: '1.25rem', fontWeight: 900, letterSpacing: '-0.5px', color: '#0F172A' }}>
+              Pak<span style={{ color: '#059669' }}>EV</span>
             </div>
-            <span style={{ fontSize: '0.68rem', color: '#9CA3AF', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
-              Electric Bike Comparator
+            <span style={{ fontSize: '0.68rem', color: '#64748B', letterSpacing: '0.5px', textTransform: 'uppercase', fontWeight: 700 }}>
+              Electric Bike Portal
             </span>
           </div>
         </Link>
 
-        {/* Navigation Links */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+        {/* Desktop Navigation Links */}
+        <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
           <Link
-            href="/#bikes-catalog"
-            style={{ fontSize: '0.88rem', fontWeight: 600, color: '#D1D5DB', transition: 'color 0.2s' }}
+            href="/bikes"
+            style={{ fontSize: '0.88rem', fontWeight: 600, color: '#334155', transition: 'color 0.2s' }}
           >
-            All Bikes (11)
+            Bikes Catalog
           </Link>
           <Link
             href="/compare"
             style={{
               fontSize: '0.88rem',
               fontWeight: 700,
-              color: '#00F299',
+              color: '#059669',
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.4rem',
@@ -75,55 +78,130 @@ export default function Navbar() {
             <Scale size={16} /> Compare Matrix
           </Link>
           <Link
-            href="/pave-calculator"
+            href="/subsidy-calculator"
             style={{
               fontSize: '0.88rem',
               fontWeight: 600,
-              color: '#D1D5DB',
+              color: '#334155',
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.4rem',
             }}
           >
-            <Calculator size={16} /> PAVE 2 Subsidy
+            <Calculator size={16} color="#2563EB" /> PAVE Subsidy
           </Link>
           <Link
-            href="/#savings-calculator"
+            href="/savings-calculator"
             style={{
               fontSize: '0.88rem',
               fontWeight: 600,
-              color: '#D1D5DB',
+              color: '#334155',
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.4rem',
             }}
           >
-            <Flame size={16} color="#F59E0B" /> Petrol vs EV
+            <Flame size={16} color="#EA580C" /> Fuel Savings
+          </Link>
+          <Link
+            href="/blog"
+            style={{
+              fontSize: '0.88rem',
+              fontWeight: 600,
+              color: '#334155',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+            }}
+          >
+            <BookOpen size={16} color="#059669" /> Blog &amp; Guides
+          </Link>
+          <Link
+            href="/dealers"
+            style={{
+              fontSize: '0.88rem',
+              fontWeight: 600,
+              color: '#334155',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+            }}
+          >
+            <MapPin size={16} color="#64748B" /> Dealers
           </Link>
         </nav>
 
-        {/* Top Right Action Button */}
+        {/* Top Right Action Badge & Mobile Toggle */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <div
             style={{
-              background: 'rgba(239, 68, 68, 0.15)',
-              border: '1px solid rgba(239, 68, 68, 0.4)',
-              color: '#F87171',
-              padding: '4px 10px',
+              background: '#FEF2F2',
+              border: '1px solid #FECACA',
+              color: '#DC2626',
+              padding: '5px 12px',
               borderRadius: '20px',
               fontSize: '0.75rem',
-              fontWeight: 700,
+              fontWeight: 800,
               letterSpacing: '0.5px',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.35rem',
+              gap: '0.4rem',
             }}
           >
-            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#EF4444' }} />
+            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#DC2626' }} />
             PAVE -Rs 80,000 Live
           </div>
+
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              color: '#0F172A',
+              display: 'none',
+            }}
+            className="mobile-nav-toggle"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Drawer */}
+      {mobileMenuOpen && (
+        <div
+          style={{
+            backgroundColor: '#FFFFFF',
+            borderBottom: '1px solid #E2E8F0',
+            padding: '1rem 1.25rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.85rem',
+          }}
+        >
+          <Link href="/bikes" onClick={() => setMobileMenuOpen(false)} style={{ color: '#0F172A', fontWeight: 600 }}>
+            🏍️ Bikes Catalog
+          </Link>
+          <Link href="/compare" onClick={() => setMobileMenuOpen(false)} style={{ color: '#059669', fontWeight: 700 }}>
+            ⚖️ Compare Matrix
+          </Link>
+          <Link href="/subsidy-calculator" onClick={() => setMobileMenuOpen(false)} style={{ color: '#0F172A', fontWeight: 600 }}>
+            🧮 PAVE Subsidy Calculator (-Rs 80k)
+          </Link>
+          <Link href="/savings-calculator" onClick={() => setMobileMenuOpen(false)} style={{ color: '#0F172A', fontWeight: 600 }}>
+            🔥 Petrol vs EV Savings (CD70)
+          </Link>
+          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: '#0F172A', fontWeight: 600 }}>
+            📖 Blog &amp; Guides
+          </Link>
+          <Link href="/dealers" onClick={() => setMobileMenuOpen(false)} style={{ color: '#0F172A', fontWeight: 600 }}>
+            📍 Showroom Hubs
+          </Link>
+        </div>
+      )}
     </header>
   )
 }

@@ -1,22 +1,40 @@
 :root {
-  --bg-carbon: #090D16;
-  --bg-carbon-alt: #0C121E;
-  --card-graphite: #111827;
-  --card-elevated: #162032;
-  --border-titanium: #1F2937;
-  --border-active: #374151;
+  /* PAVE Scheme Light Theme Tokens */
+  --bg-canvas: #F8FAFC;
+  --bg-canvas-alt: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
   
-  --neon-mint: #00F299;
-  --neon-mint-glow: rgba(0, 242, 153, 0.25);
-  --speed-cyan: #00D2FF;
-  --speed-cyan-glow: rgba(0, 210, 255, 0.25);
+  --border-subtle: #E2E8F0;
+  --border-active: #CBD5E1;
+  --border-focus: #059669;
   
-  --danger-subsidy: #EF4444;
-  --warning-amber: #F59E0B;
+  /* Brand Green (Official Pakistan EV Policy Green) */
+  --pave-green: #059669;
+  --pave-green-dark: #047857;
+  --pave-green-light: #ECFDF5;
+  --pave-green-border: #A7F3D0;
   
-  --text-white: #FFFFFF;
-  --text-slate: #9CA3AF;
-  --text-muted: #6B7280;
+  /* Technical Blue */
+  --pave-blue: #2563EB;
+  --pave-blue-dark: #1D4ED8;
+  --pave-blue-light: #EFF6FF;
+  --pave-blue-border: #BFDBFE;
+  
+  /* Alerts */
+  --danger-red: #DC2626;
+  --danger-light: #FEF2F2;
+  --danger-border: #FECACA;
+  
+  --warning-amber: #D97706;
+  --warning-light: #FFFBEB;
+  --warning-border: #FDE68A;
+  
+  /* Typography */
+  --text-heading: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
 }
 
 * {
@@ -26,9 +44,9 @@
 }
 
 body {
-  background-color: var(--bg-carbon);
-  color: var(--text-white);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-body);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   min-height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
@@ -45,28 +63,45 @@ a {
   font-variant-numeric: tabular-nums;
 }
 
-/* Subtle carbon grain / radial lighting */
-.carbon-glow {
+/* Subtle clean light portal backdrop */
+.portal-backdrop {
+  background-color: #F8FAFC;
   background-image: 
-    radial-gradient(circle at 10% 15%, rgba(0, 242, 153, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 90% 85%, rgba(0, 210, 255, 0.07) 0%, transparent 45%);
+    radial-gradient(circle at 10% 10%, rgba(5, 150, 105, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(37, 99, 235, 0.04) 0%, transparent 40%);
 }
 
-/* Custom scrollbar */
+/* Card hover animation */
+.card-interactive {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border-color: #CBD5E1;
+}
+
+/* Custom light scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090D16;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1F2937;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #374151;
+  background: #94A3B8;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
 }

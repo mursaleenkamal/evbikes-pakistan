@@ -37,22 +37,25 @@ export default function SavingsSlider() {
     <div
       id="savings-calculator"
       style={{
-        backgroundColor: '#111827',
-        border: '1.5px solid #1F2937',
+        width: '100%',
+        maxWidth: '100%',
+        overflow: 'hidden',
+        backgroundColor: '#FFFFFF',
+        border: '1px solid #E2E8F0',
         borderRadius: '24px',
-        padding: '2.5rem 2rem',
-        boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
+        padding: '2.5rem 1.75rem',
+        boxShadow: '0 4px 25px rgba(0, 0, 0, 0.06)',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#00F299', fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#059669', fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>
         <PiggyBank size={18} />
         <span>Commute ROI &amp; Fuel Savings Engine</span>
       </div>
 
-      <h2 style={{ fontSize: '1.85rem', fontWeight: 900, color: '#FFFFFF', margin: '0.5rem 0 0.8rem', letterSpacing: '-0.5px' }}>
-        Honda CD70 vs Electric Bike: <span style={{ color: '#00F299' }}>How Much Do You Save?</span>
+      <h2 style={{ fontSize: '1.85rem', fontWeight: 900, color: '#0F172A', margin: '0.5rem 0 0.8rem', letterSpacing: '-0.5px' }}>
+        Honda CD70 vs Electric Bike: <span style={{ color: '#059669' }}>How Much Do You Save?</span>
       </h2>
-      <p style={{ color: '#9CA3AF', fontSize: '0.95rem', lineHeight: 1.6, maxWidth: '780px' }}>
+      <p style={{ color: '#64748B', fontSize: '0.95rem', lineHeight: 1.6, maxWidth: '780px' }}>
         Compare your real monthly petrol expenses against electric charging. Factor in rising petrol prices and discover how fast an electric bike pays for itself under the PAVE Phase 2 subsidy.
       </p>
 
@@ -60,7 +63,7 @@ export default function SavingsSlider() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
           gap: '2.5rem',
           marginTop: '2rem',
           alignItems: 'center',
@@ -71,10 +74,10 @@ export default function SavingsSlider() {
           {/* Slider 1: Daily KM */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#E5E7EB' }}>
+              <label style={{ fontSize: '0.92rem', fontWeight: 700, color: '#0F172A' }}>
                 Your Daily Commute Distance:
               </label>
-              <span style={{ fontSize: '1.3rem', fontWeight: 900, color: '#00F299' }} className="tabular-nums">
+              <span style={{ fontSize: '1.3rem', fontWeight: 900, color: '#059669' }} className="tabular-nums">
                 {dailyKm} km / day
               </span>
             </div>
@@ -85,9 +88,9 @@ export default function SavingsSlider() {
               step={5}
               value={dailyKm}
               onChange={(e) => setDailyKm(Number(e.target.value))}
-              style={{ width: '100%', accentColor: '#00F299', cursor: 'pointer', height: '8px' }}
+              style={{ width: '100%', accentColor: '#059669', cursor: 'pointer', height: '8px' }}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#6B7280' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748B' }}>
               <span>15 km (Short City Trip)</span>
               <span>60 km (Typical Clifton / DHA / Korangi)</span>
               <span>110 km (Intercity)</span>
@@ -102,8 +105,8 @@ export default function SavingsSlider() {
                 type="button"
                 onClick={() => setDailyKm(km)}
                 style={{
-                  background: dailyKm === km ? '#00F299' : '#1F2937',
-                  color: dailyKm === km ? '#090D16' : '#D1D5DB',
+                  background: dailyKm === km ? '#059669' : '#F1F5F9',
+                  color: dailyKm === km ? '#FFFFFF' : '#334155',
                   border: 'none',
                   borderRadius: '8px',
                   padding: '6px 14px',
@@ -121,24 +124,24 @@ export default function SavingsSlider() {
           {/* Cost Benchmarks Info */}
           <div
             style={{
-              backgroundColor: '#090D16',
-              border: '1px solid #1F2937',
+              backgroundColor: '#F8FAFC',
+              border: '1px solid #E2E8F0',
               borderRadius: '14px',
               padding: '1rem',
               display: 'flex',
               flexDirection: 'column',
               gap: '0.5rem',
               fontSize: '0.82rem',
-              color: '#9CA3AF',
+              color: '#64748B',
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span>Petrol Price Baseline:</span>
-              <strong style={{ color: '#F87171' }}>Rs {petrolPrice} / Liter</strong>
+              <strong style={{ color: '#DC2626' }}>Rs {petrolPrice} / Liter</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span>Electricity Tariff Rate:</span>
-              <strong style={{ color: '#60A5FA' }}>Rs {elecRate} / Unit (kWh)</strong>
+              <strong style={{ color: '#2563EB' }}>Rs {elecRate} / Unit (kWh)</strong>
             </div>
           </div>
         </div>
@@ -146,45 +149,45 @@ export default function SavingsSlider() {
         {/* Right Output: Side-by-Side Savings Cockpit */}
         <div
           style={{
-            background: 'linear-gradient(145deg, #162032 0%, #0D1420 100%)',
-            border: '2px solid #00F299',
+            background: 'linear-gradient(145deg, #ECFDF5 0%, #FFFFFF 100%)',
+            border: '2px solid #059669',
             borderRadius: '20px',
             padding: '2rem 1.75rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1.5rem',
-            boxShadow: '0 0 35px rgba(0, 242, 153, 0.15)',
+            boxShadow: '0 8px 30px rgba(5, 150, 105, 0.12)',
           }}
         >
           {/* Big Savings Number */}
           <div style={{ textAlign: 'center' }}>
-            <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#00F299', textTransform: 'uppercase', letterSpacing: '1px' }}>
+            <span style={{ fontSize: '0.8rem', fontWeight: 800, color: '#059669', textTransform: 'uppercase', letterSpacing: '1px' }}>
               Net Monthly Money Saved
             </span>
-            <div style={{ fontSize: '3.2rem', fontWeight: 900, color: '#FFFFFF', lineHeight: 1.1, margin: '0.4rem 0' }} className="tabular-nums">
+            <div style={{ fontSize: '3.2rem', fontWeight: 900, color: '#0F172A', lineHeight: 1.1, margin: '0.4rem 0' }} className="tabular-nums">
               Rs. {stats.monthlySavings.toLocaleString()}
             </div>
-            <span style={{ fontSize: '0.88rem', color: '#9CA3AF' }}>
-              Annual Savings: <strong style={{ color: '#00F299' }}>Rs. {stats.annualSavings.toLocaleString()} / year</strong>
+            <span style={{ fontSize: '0.88rem', color: '#64748B' }}>
+              Annual Savings: <strong style={{ color: '#059669' }}>Rs. {stats.annualSavings.toLocaleString()} / year</strong>
             </span>
           </div>
 
           {/* Breakdown Rows */}
-          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+          <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#F87171', fontSize: '0.9rem', fontWeight: 700 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#DC2626', fontSize: '0.9rem', fontWeight: 700 }}>
                 <Flame size={16} /> 70cc Petrol Monthly Cost:
               </div>
-              <strong style={{ fontSize: '1.1rem', color: '#F87171' }} className="tabular-nums">
+              <strong style={{ fontSize: '1.1rem', color: '#DC2626' }} className="tabular-nums">
                 Rs. {stats.monthlyPetrolCost.toLocaleString()}
               </strong>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#00F299', fontSize: '0.9rem', fontWeight: 700 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#059669', fontSize: '0.9rem', fontWeight: 700 }}>
                 <Zap size={16} /> EV Bike Monthly Electricity:
               </div>
-              <strong style={{ fontSize: '1.1rem', color: '#00F299' }} className="tabular-nums">
+              <strong style={{ fontSize: '1.1rem', color: '#059669' }} className="tabular-nums">
                 Rs. {stats.monthlyEvCost.toLocaleString()}
               </strong>
             </div>
@@ -193,20 +196,20 @@ export default function SavingsSlider() {
           {/* Payback Banner */}
           <div
             style={{
-              backgroundColor: 'rgba(0, 242, 153, 0.1)',
-              border: '1px solid rgba(0, 242, 153, 0.3)',
+              backgroundColor: '#EFF6FF',
+              border: '1px solid #BFDBFE',
               borderRadius: '12px',
               padding: '0.85rem 1rem',
               display: 'flex',
               alignItems: 'center',
               gap: '0.65rem',
               fontSize: '0.85rem',
-              color: '#E5E7EB',
+              color: '#1E3A8A',
             }}
           >
-            <CheckCircle2 size={20} color="#00F299" style={{ flexShrink: 0 }} />
+            <CheckCircle2 size={20} color="#059669" style={{ flexShrink: 0 }} />
             <span>
-              Your new EV bike completely <strong style={{ color: '#00F299' }}>pays for itself in {stats.paybackMonths} months</strong> strictly from petrol savings!
+              Your new EV bike completely <strong style={{ color: '#059669' }}>pays for itself in {stats.paybackMonths} months</strong> strictly from petrol savings!
             </span>
           </div>
         </div>
