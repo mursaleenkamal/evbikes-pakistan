@@ -99,5 +99,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticRoutes, ...bikeRoutes, ...blogRoutes]
+  // Programmatic comparison routes
+  const topPairs = [
+    'yadea-t5-vs-metro-t9-pro',
+    'evee-c1-pro-vs-yadea-ruibin',
+    'vlektra-retro-vs-vlektra-velocity-180',
+    'evee-s1-air-lithium-vs-metro-m6-empower',
+    'jolta-je-70g-fury-vs-yadea-ruibin',
+    'yadea-t5-vs-evee-c1-pro',
+    'metro-t9-pro-vs-metro-m6-empower',
+    'vlektra-bolt-vs-vlektra-velocity-180',
+    'jolta-je-70g-fury-vs-crown-ezee',
+    'yadea-t5-vs-vlektra-retro',
+  ]
+
+  const compareRoutes: MetadataRoute.Sitemap = topPairs.map((slug) => ({
+    url: `${baseUrl}/compare/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }))
+
+  return [...staticRoutes, ...bikeRoutes, ...blogRoutes, ...compareRoutes]
 }
