@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 function MatrixWrapper({ searchParams }: { searchParams: Promise<{ b1?: string; b2?: string; b3?: string }> }) {
   return (
-    <Suspense fallback={<div style={{ color: '#00F299', padding: '3rem', textAlign: 'center' }}>Loading Comparison Matrix...</div>}>
+    <Suspense fallback={<div style={{ color: '#059669', padding: '3rem', textAlign: 'center', fontWeight: 800 }}>Loading Comparison Matrix...</div>}>
       <MatrixLoader searchParams={searchParams} />
     </Suspense>
   )
@@ -36,7 +36,7 @@ export default async function ComparePage(props: {
   searchParams: Promise<{ b1?: string; b2?: string; b3?: string }>
 }) {
   return (
-    <div className="carbon-glow" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="portal-backdrop" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
 
       <main style={{ maxWidth: '1240px', margin: '0 auto', padding: '2rem 1.25rem', width: '100%', minWidth: 0, overflowX: 'hidden', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
@@ -49,26 +49,26 @@ export default async function ComparePage(props: {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.4rem',
-              color: '#9CA3AF',
+              color: '#64748B',
               fontSize: '0.85rem',
               fontWeight: 600,
             }}
           >
-            <ArrowLeft size={16} /> Back to All Bikes &amp; Calculators
+            <ArrowLeft size={16} /> Back to Homepage &amp; Catalog
           </Link>
 
           <div
             style={{
-              background: 'rgba(0, 242, 153, 0.1)',
-              border: '1px solid rgba(0, 242, 153, 0.3)',
-              color: '#00F299',
+              background: '#ECFDF5',
+              border: '1px solid #A7F3D0',
+              color: '#059669',
               padding: '4px 12px',
               borderRadius: '999px',
               fontSize: '0.78rem',
               fontWeight: 800,
             }}
           >
-            ⚡ Automotive Head-to-Head Mode
+            ⚡ Official Head-to-Head Comparison
           </div>
         </div>
 
