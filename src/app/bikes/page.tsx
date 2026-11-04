@@ -6,19 +6,39 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadModal from '@/components/LeadModal'
+import CompareTray from '@/components/CompareTray'
 import { EV_BIKES } from '@/data/bikes'
 import { EvBike } from '@/types'
-import { Search, Filter, Scale, ArrowRight, Zap, ShieldCheck, CheckCircle2 } from 'lucide-react'
+import { Search, Filter, Scale, ArrowRight, Zap, ShieldCheck, CheckCircle2, Check, Plus } from 'lucide-react'
 
 export default function BikesCatalogPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedBrand, setSelectedBrand] = useState('All')
   const [selectedBattery, setSelectedBattery] = useState('All')
   const [activeModalBike, setActiveModalBike] = useState<EvBike | null>(null)
+  const [compareIds, setCompareIds] = useState<string[]>([])
 
   const brands = useMemo(() => {
     return ['All', ...Array.from(new Set(EV_BIKES.map((b) => b.brand)))]
   }, [])
+
+  const toggleCompare = (id: string) => {
+    if (compareIds.includes(id)) {
+      setCompareIds(compareIds.filter((item) => item !== id))
+    } else {
+      if (compareIds.length >= 3) {
+        alert('You can compare a maximum of 3 bikes at a time.')
+        return
+      }
+      setCompareIds([...compareIds, id])
+    }
+  }
+
+  const selectedCompareBikes = useMemo(() => {
+    return compareIds
+      .map((id) => EV_BIKES.find((b) => b.id === id))
+      .filter((b): b is EvBike => b !== undefined)
+  }, [compareIds])
 
   const filteredBikes = useMemo(() => {
     return EV_BIKES.filter((bike) => {
@@ -277,11 +297,13 @@ export default function BikesCatalogPage() {
                   >
                     View Specs
                   </Link>
-                  <Link
-                    href={`/compare?b1=${bike.slug}&b2=yadea-t5`}
+                  <button
+                    type="button"
+                    onClick={() => toggleCompare(bike.id)}
                     style={{
-                      backgroundColor: '#059669',
-                      color: '#FFFFFF',
+                      backgroundColor: compareIds.includes(bike.id) ? '#ECFDF5' : '#FFFFFF',
+                      color: compareIds.includes(bike.id) ? '#059669' : '#0F172A',
+                      border: `1.5px solid ${compareIds.includes(bike.id) ? '#059669' : '#CBD5E1'}`,
                       borderRadius: '10px',
                       padding: '0.7rem',
                       textAlign: 'center',
@@ -290,11 +312,21 @@ export default function BikesCatalogPage() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      gap: '0.3rem',
+                      gap: '0.35rem',
+                      cursor: 'pointer',
+                      transition: 'all 0.15s ease',
                     }}
                   >
-                    <Scale size={14} /> Compare
-                  </Link>
+                    {compareIds.includes(bike.id) ? (
+                      <>
+                        <Check size={15} /> Added
+                      </>
+                    ) : (
+                      <>
+                        <Plus size={15} /> Compare
+                      </>
+                    )}
+                  </button>
                 </div>
               </div>
             </div>
@@ -302,6 +334,13 @@ export default function BikesCatalogPage() {
         </div>
 
       </main>
+
+      {/* Floating Bottom Comparison Tray */}
+      <CompareTray
+        selectedBikes={selectedCompareBikes}
+        onRemove={(id) => setCompareIds(compareIds.filter((item) => item !== id))}
+        onClear={() => setCompareIds([])}
+      />
 
       <Footer />
       <LeadModal bike={activeModalBike} onClose={() => setActiveModalBike(null)} />
